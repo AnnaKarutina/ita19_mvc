@@ -46,6 +46,16 @@ def uuenda_element(nimetus, hind, kogus):
     else:
         elemendid[nimetused.index(nimetus)] = {"nimetus":nimetus, "hind":hind, "kogus":kogus}
 
+# kustutame KONKREETSET elementi
+def kustuta_element(nimetus):
+    global elemendid
+    nimetused = []
+    for element in elemendid:
+        nimetused.append(list(element.values())[0])
+    if nimetus not in nimetused:
+        print("Elementi {} ei saa kustutada, kuna ta ei eksisteeri".format(nimetus))
+    else:
+        elemendid.remove(elemendid[nimetused.index(nimetus)])
 
 def main():
     # loome katseandmestik
@@ -68,6 +78,10 @@ def main():
 
     # testime elemendi uuendamist
     uuenda_element("vein", 10.0, 10)
+    print(loe_element("vein"))
+
+    # testime elemendi kustutamist
+    kustuta_element("vein")
     print(loe_element("vein"))
 
 # käivitame
