@@ -35,6 +35,18 @@ def loe_element(nimetus):
     else:
        return elemendid[nimetused.index(nimetus)]
 
+# uuendame KONKREETSET elementi
+def uuenda_element(nimetus, hind, kogus):
+    global elemendid
+    nimetused = []
+    for element in elemendid:
+        nimetused.append(list(element.values())[0])
+    if nimetus not in nimetused:
+        print("Elementi {} ei saa uuendada, kuna ta ei eksisteeri".format(nimetus))
+    else:
+        elemendid[nimetused.index(nimetus)] = {"nimetus":nimetus, "hind":hind, "kogus":kogus}
+
+
 def main():
     # loome katseandmestik
     katse_elemendid = [
@@ -48,11 +60,15 @@ def main():
 
     # testime üksiku elemendi lisamist
     lisa_element("kohupiim", 0.90, 15)
-    lisa_element("vein", 5.60, 5)
+    #lisa_element("vein", 5.60, 5)
 
     # testime elementide lugemist
+    #print(loe_element("vein"))
+    #print(loe_element("limonaad"))
+
+    # testime elemendi uuendamist
+    uuenda_element("vein", 10.0, 10)
     print(loe_element("vein"))
-    print(loe_element("limonaad"))
 
 # käivitame
 if __name__ == "__main__":
