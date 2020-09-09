@@ -57,6 +57,11 @@ def kustuta_element(nimetus):
     else:
         elemendid.remove(elemendid[nimetused.index(nimetus)])
 
+# kustutame KÕIK elemendid
+def kustuta_elemendid():
+    global elemendid
+    elemendid.clear()
+
 def main():
     # loome katseandmestik
     katse_elemendid = [
@@ -83,6 +88,10 @@ def main():
     # testime elemendi kustutamist
     kustuta_element("vein")
     print(loe_element("vein"))
+
+    # testime elementide kustutamist
+    kustuta_elemendid()
+    print(loe_elemendid())
 
 # käivitame
 if __name__ == "__main__":
