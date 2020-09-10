@@ -1,4 +1,6 @@
 from model import Model
+from view import View
+from controller import Controller
 
 elemendid = [
     {"nimetus": "leib", "hind":0.80, "kogus": 20},
@@ -7,24 +9,7 @@ elemendid = [
 ]
 # testimine
 # loome uus andmestik
-pood = Model(elemendid)
-# kontrollime sisu
-print(pood.loe_elemendid())
-# lisame element juurde
-pood.lisa_element("kohupiim", 0.60, 15)
-print(pood.loe_elemendid())
-# lisame olemasolev element - trükib meie veateade ilusti
-pood.lisa_element("vein", 10.0, 15)
-print(pood.loe_elemendid())
-# muudame elemendi sisu
-pood.uuenda_element("vein", 10.60, 15)
-print(pood.loe_elemendid())
-# proovime muuta element, mis ei eiksisteeri - ilusti trükib meie veateade
-pood.uuenda_element("limonaad", 10.60, 15)
-print(pood.loe_elemendid())
-# kustutame üks element
-pood.kustuta_element("vein")
-print(pood.loe_elemendid())
-# kustutame kõik elemendid
-pood.kustuta_elemendid()
-print(pood.loe_elemendid())
+pood = Controller(Model(elemendid), View())
+# kõikide elementide kuvamine
+pood.kuva_elemendid()
+
