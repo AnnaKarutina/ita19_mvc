@@ -19,3 +19,7 @@ class View:
         if(vana_kogus != uus_kogus):
             print("Muudetud kogus: {} -> {}".format(vana_kogus, uus_kogus))
 
+    def kustuta_element(self, nimetus):
+        print("Elemendi {} kustutamine".format(nimetus))
+        print("Element {} on kustutatud elementide nimekirjast".format(nimetus))
+

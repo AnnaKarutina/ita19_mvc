@@ -33,3 +33,8 @@ class Controller:
             vana_element = self.mudel.loe_element(nimetus)
             self.mudel.uuenda_element(nimetus, hind, kogus)
             self.vaade.uuenda_element(nimetus, vana_element['hind'], vana_element['kogus'], hind, kogus)
+
+    # elemendi kustutamine
+    def kustuta_element(self, nimetus):
+        self.mudel.kustuta_element(nimetus)
+        self.vaade.kustuta_element(nimetus)
