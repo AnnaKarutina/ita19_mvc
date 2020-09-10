@@ -12,4 +12,6 @@ elemendid = [
 pood = Controller(Model(elemendid), View())
 # kõikide elementide kuvamine
 pood.kuva_elemendid()
+# konkreetse elemendi kuvamine
+pood.kuva_element("piim")
 
