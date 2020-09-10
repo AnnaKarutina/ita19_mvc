@@ -12,4 +12,10 @@ class View:
         print("Elemendi lisamine")
         print("Lisatud {} hinnaga {}EUR koguses {}".format(nimetus, hind, kogus))
 
+    def uuenda_element(self, nimetus, vana_hind, vana_kogus, uus_hind, uus_kogus):
+        print("Elemendi {} uuendamine".format(nimetus))
+        if(vana_hind != uus_hind):
+            print("Muudetud hind: {} -> {}".format(vana_hind, uus_hind))
+        if(vana_kogus != uus_kogus):
+            print("Muudetud kogus: {} -> {}".format(vana_kogus, uus_kogus))
 

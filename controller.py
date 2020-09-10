@@ -22,3 +22,14 @@ class Controller:
         else:
             self.mudel.lisa_element(nimetus, hind, kogus)
             self.vaade.lisa_element(nimetus, hind, kogus)
+
+    # elemendi uuendamine
+    def uuenda_element(self, nimetus, hind, kogus):
+        if (hind <= 0):
+            print("Hind peab olema suurem kui 0 EUR")
+        elif (kogus <= 0):
+            print("Kogus peab olema suurem kui 0")
+        else:
+            vana_element = self.mudel.loe_element(nimetus)
+            self.mudel.uuenda_element(nimetus, hind, kogus)
+            self.vaade.uuenda_element(nimetus, vana_element['hind'], vana_element['kogus'], hind, kogus)
