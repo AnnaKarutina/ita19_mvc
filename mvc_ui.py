@@ -14,4 +14,6 @@ pood = Controller(Model(elemendid), View())
 pood.kuva_elemendid()
 # konkreetse elemendi kuvamine
 pood.kuva_element("piim")
-
+# elemendi lisamine
+pood.lisa_element("kohuke", 0.60, 15)
+pood.kuva_element("kohuke")

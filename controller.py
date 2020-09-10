@@ -12,3 +12,13 @@ class Controller:
     def kuva_element(self, nimetus):
         element = self.mudel.loe_element(nimetus)
         self.vaade.kuva_element(nimetus, element)
+
+    # elemendi lisamine
+    def lisa_element(self, nimetus, hind, kogus):
+        if(hind <= 0):
+            print("Hind peab olema suurem kui 0 EUR")
+        elif(kogus <= 0):
+            print("Kogus peab olema suurem kui 0")
+        else:
+            self.mudel.lisa_element(nimetus, hind, kogus)
+            self.vaade.lisa_element(nimetus, hind, kogus)
