@@ -1,3 +1,5 @@
+import exceptions
+
 elemendid = []
 
 # lisame ELEMENT juurde
@@ -7,7 +9,7 @@ def lisa_element(nimetus, hind, kogus):
     for element in elemendid:
         nimetused.append(list(element.values())[0])
     if nimetus in nimetused:
-        print("Element {} on juba olemas".format(nimetus))
+        raise exceptions.ElementJubaOlemas("Element {} on juba olemas".format(nimetus))
     else:
         elemendid.append({"nimetus":nimetus, "hind":hind, "kogus":kogus})
 

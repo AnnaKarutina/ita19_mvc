@@ -16,6 +16,8 @@ pood.kuva_elemendid()
 pood.kuva_element("piim")
 # elemendi lisamine
 pood.lisa_element("kohuke", 0.60, 15)
+print("lisa veel üks kohuke")
+pood.lisa_element("kohuke", 0.60, 15)
 pood.kuva_element("kohuke")
 # elemendi uuendamine
 pood.uuenda_element("vein", 10.0, 10)

@@ -12,6 +12,13 @@ class View:
         print("Elemendi lisamine")
         print("Lisatud {} hinnaga {}EUR koguses {}".format(nimetus, hind, kogus))
 
+    def veateade_element_juba_olemas(self, nimetus, veateade):
+        print("===============================================")
+        print("Elemendi {} lisamise probleem".format(nimetus))
+        print(veateade)
+        print("===============================================")
+
+
     def uuenda_element(self, nimetus, vana_hind, vana_kogus, uus_hind, uus_kogus):
         print("Elemendi {} uuendamine".format(nimetus))
         if(vana_hind != uus_hind):
