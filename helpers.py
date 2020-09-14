@@ -33,7 +33,7 @@ def loe_element(nimetus):
     for element in elemendid:
             nimetused.append(list(element.values())[0])
     if nimetus not in nimetused:
-        return "Elementi {} ei eksisteeri".format(nimetus)
+        raise exceptions.ElemendiEiOle("Elementi {} ei eksisteeri".format(nimetus))
     else:
        return elemendid[nimetused.index(nimetus)]
 
